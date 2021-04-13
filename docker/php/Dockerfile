@@ -29,6 +29,7 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 RUN composer global require phpunit/phpunit ^7.4
+RUN composer global require robmorgan/phinx ^0.9.2
 
 ENV PATH /root/.composer/vendor/bin:$PATH
 
