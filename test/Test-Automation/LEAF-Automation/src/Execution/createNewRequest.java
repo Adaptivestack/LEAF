@@ -5,7 +5,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.AssertJUnit;
 import org.testng.asserts.*;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 import org.openqa.selenium.By;
@@ -23,6 +26,7 @@ import Framework.highlightElement;
 
 public class createNewRequest extends setupFramework {
 
+	//private static final DateFormat Calendar = null;
 	Date date = new Date();
 	
 	@BeforeMethod
@@ -41,12 +45,12 @@ public class createNewRequest extends setupFramework {
 	private void testForCertPage() /*throws InterruptedException */ {
 	    try {
 	    	//waitMethods.implicitWait(waitMethods.w300);
-	    	waitMethods.waiter(waitMethods.w500);
+	    	waitMethods.waiter(waitMethods.w300);
 	    	WebElement ele = driver.findElement(By.id("details-button"));  //.click();
 	    	highlightElement.highLightElement(driver, ele);
 	    	ele.click();
 
-	    	waitMethods.waiter(waitMethods.w500);
+	    	waitMethods.waiter(waitMethods.w300);
 	    	
 	        WebElement ele2 = driver.findElement(By.partialLinkText("Proceed to localhost")); //.click();
 	    	ele2.click();
@@ -65,7 +69,7 @@ public class createNewRequest extends setupFramework {
 		WebElement ele = driver.findElement(By.xpath("//*[@id=\"bodyarea\"]/div[1]/a[1]/span")); 
 		highlightElement.highLightElement(driver, ele);
 		ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		System.out.println("New Request Button clicked");
 	}
 
@@ -73,11 +77,11 @@ public class createNewRequest extends setupFramework {
 	
 	@Test(priority = 204) //
 	private void selectService() {
-		waitMethods.waiter(waitMethods.w1k);       
+		waitMethods.waiter(waitMethods.w500);       
 		WebElement ele = driver.findElement(By.cssSelector("#service_chosen > a > span"));
 	    highlightElement.highLightElement(driver, ele);
 	    ele.click();
-		waitMethods.waiter(waitMethods.w1k);
+		waitMethods.waiter(waitMethods.w500);
 	    System.out.println("Clicked Service Drop down menu");
 	} 
 
@@ -87,11 +91,11 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 206) // 
 	private void selectServiceAcuteCare() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.cssSelector("#service-chosen-search-result-1")); //.click(); 
 		highlightElement.highLightElement(driver, ele);
         ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
         System.out.println("Selected Service 'Acute Care'");
 } 
 
@@ -100,11 +104,11 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 208) //
 	private void selectRequestPriority() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.cssSelector("#priority_chosen > a > span")); 
 	    highlightElement.highLightElement(driver, ele);
 	    ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		//driver.navigate().back();    //navigate back
 	    System.out.println("Checked priority values in DDL");
 	} 
@@ -113,11 +117,11 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 210) 
 	private void selectRequestNormalPriority() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.cssSelector("#priority_chosen > a > span")); 
 	    highlightElement.highLightElement(driver, ele);     
 	    ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		//driver.navigate().back();    //navigate back
 	    System.out.println("Select Request Normal Priority");
 	} 
@@ -130,11 +134,11 @@ public class createNewRequest extends setupFramework {
 		//waitMethods.implicitWait(waitMethods.w300);	
 		
 			
-		waitMethods.waiter(waitMethods.w1k);
+		waitMethods.waiter(waitMethods.w300);
 		WebElement ele = driver.findElement(By.name("title")); //.click();  
 	    highlightElement.highLightElement(driver, ele);
 	    ele.sendKeys("Test Automation " + getDate());
-		waitMethods.waiter(waitMethods.w1k);
+		waitMethods.waiter(waitMethods.w250);
 	    System.out.println("Input Request Title: 'Test Automation");
 	} 
 
@@ -152,9 +156,9 @@ public class createNewRequest extends setupFramework {
 	private void selectMRTestChkBox() {
 	    WebElement ele = driver.findElement(By.xpath("//*[@id=\"record\"]/div[2]/div[2]/div/div[2]/span/div[10]"));
 	    highlightElement.highLightElement(driver, ele);
-	    waitMethods.waiter(waitMethods.w500);
+	    waitMethods.waiter(waitMethods.w250);
 	    ele.click();   
-	    waitMethods.waiter(waitMethods.w1k);
+	    waitMethods.waiter(waitMethods.w500);
 	    System.out.println("Selected MR - Test Checkbox");
 	} 
 
@@ -163,11 +167,11 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 216) 
 	private void selectClickToProceedButton() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.xpath("//*[@id=\"record\"]/div[2]/div[2]/div/div[3]/button")); 
 	    highlightElement.highLightElement(driver, ele);     
 	    ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 	    System.out.println("Clicked Click to Proceed button");
 	} 
 
@@ -211,13 +215,13 @@ public class createNewRequest extends setupFramework {
 	
 	//Yes = 
 	@Test(priority = 224)
-	public void confirmCancelYes()  {   //
+	public void confirmCancelYes()  {   //We're testing the cancel button - will then begin the request again
 		//waitMethods.implicitWait(waitMethods.w300);
     	//waitMethods.waiter(waitMethods.w200);
     	WebElement ele = driver.findElement(By.id("confirm_button_save"));
     	highlightElement.highLightElement(driver, ele);
     	ele.click();
-    	waitMethods.waiter(waitMethods.w200);			
+    	waitMethods.waiter(waitMethods.w300);			
 		System.out.println("Confirm cancel -> No");			
 	}
 
@@ -226,7 +230,7 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 226)
 	public void returnToHomePage()  {   //
 		//waitMethods.implicitWait(waitMethods.w300);
-    	//waitMethods.waiter(waitMethods.w200);
+    	waitMethods.waiter(waitMethods.w200);
     	WebElement ele = driver.findElement(By.partialLinkText("Main Page"));
     	highlightElement.highLightElement(driver, ele);
     	ele.click();
@@ -244,7 +248,7 @@ public class createNewRequest extends setupFramework {
 		WebElement ele = driver.findElement(By.xpath("//*[@id=\"bodyarea\"]/div[1]/a[1]/span")); 
 		highlightElement.highLightElement(driver, ele);
 		ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		System.out.println("New Request Button clicked (2)");
 	}
 
@@ -252,11 +256,11 @@ public class createNewRequest extends setupFramework {
 	
 	@Test(priority = 230) //
 	private void selectService2() {
-		waitMethods.waiter(waitMethods.w1k);       
+		waitMethods.waiter(waitMethods.w500);       
 		WebElement ele = driver.findElement(By.cssSelector("#service_chosen > a > span"));
 	    highlightElement.highLightElement(driver, ele);
 	    ele.click();
-		waitMethods.waiter(waitMethods.w1k);
+		waitMethods.waiter(waitMethods.w500);
 	    System.out.println("Clicked Service Drop down menu (2)");
 	} 
 
@@ -266,11 +270,11 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 232) // 
 	private void selectServiceAcuteCare2() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.cssSelector("#service-chosen-search-result-1")); //.click(); 
 		highlightElement.highLightElement(driver, ele);
         ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
         System.out.println("Selected Service 'Acute Care' (2)");
 } 
 
@@ -278,11 +282,11 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 234) //
 	private void selectRequestPriority2() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.cssSelector("#priority_chosen > a > span")); 
 	    highlightElement.highLightElement(driver, ele);
 	    ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		//driver.navigate().back();    //navigate back
 	    System.out.println("Selected priority DDL (2)");
 	} 
@@ -291,11 +295,11 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 236) 
 	private void selectRequestNormalPriority2() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.cssSelector("#priority_chosen > a > span")); 
 	    highlightElement.highLightElement(driver, ele);     
 	    ele.click();
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		//driver.navigate().back();    //navigate back
 	    System.out.println("Select Request Normal Priority (2)");
 	} 
@@ -306,11 +310,12 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 238) //
 	private void inputRequestTitle2() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w1k);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.name("title")); //.click();  
 	    highlightElement.highLightElement(driver, ele);
-	    ele.sendKeys("Test Automation (2) " + getDate());
-		waitMethods.waiter(waitMethods.w1k);
+	    ele.sendKeys("Test Automation " + getDate());
+	    //ele.sendKeys("Test Automation " + Date());
+		waitMethods.waiter(waitMethods.w250);
 	    System.out.println("Input Request Title: 'Test Automation (2)");
 	} 
 
@@ -321,9 +326,9 @@ public class createNewRequest extends setupFramework {
 	private void selectMRTestChkBox2() {
 	    WebElement ele = driver.findElement(By.xpath("//*[@id=\"record\"]/div[2]/div[2]/div/div[2]/span/div[10]"));
 	    highlightElement.highLightElement(driver, ele);
-	    waitMethods.waiter(waitMethods.w500);
+	    waitMethods.waiter(waitMethods.w250);
 	    ele.click();   
-	    waitMethods.waiter(waitMethods.w1k);
+	    waitMethods.waiter(waitMethods.w250);
 	    System.out.println("Selected MR - Test Checkbox");
 	}
 	
@@ -332,7 +337,7 @@ public class createNewRequest extends setupFramework {
 	@Test(priority = 242) 
 	private void selectClickToProceedButton2() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
+		waitMethods.waiter(waitMethods.w250);
 		WebElement ele = driver.findElement(By.xpath("//*[@id=\"record\"]/div[2]/div[2]/div/div[3]/button")); 
 	    highlightElement.highLightElement(driver, ele);     
 	    ele.click();
@@ -341,23 +346,118 @@ public class createNewRequest extends setupFramework {
 	} 
 
 	
-	@Test(priority = 244) 
-	private void selectNextQuestion() {
+	
+
+	
+	@Test(priority = 246) 
+	private void enterFirstAndLastName() {
 		//waitMethods.implicitWait(waitMethods.w300);	
-		waitMethods.waiter(waitMethods.w500);
-		WebElement ele = driver.findElement(By.id("nextQuestion2x")); 
+		waitMethods.waiter(waitMethods.w250);
+		WebElement ele = driver.findElement(By.id("2")); 
 	    highlightElement.highLightElement(driver, ele);     
-	    ele.click();
-		waitMethods.waiter(waitMethods.w500);
-	    System.out.println("Clicked Next Question");
+	    ele.sendKeys("Test Automation");
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("Entered First and Last Name");
+	} 
+	
+	
+
+	@Test(priority = 248) 
+	private void enterMiddleInitial() {
+		//waitMethods.implicitWait(waitMethods.w300);	
+		waitMethods.waiter(waitMethods.w250);
+		WebElement ele = driver.findElement(By.id("3")); 
+	    highlightElement.highLightElement(driver, ele);     
+	    ele.sendKeys("Q");
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("Entered Middle Initial");
 	} 
 	
 	
 	
-	public SimpleDateFormat getDate() {
-		SimpleDateFormat dte = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-		return dte;
-	}
+	@Test(priority = 250) 
+	private void selectNextQuestion2() {
+		//waitMethods.implicitWait(waitMethods.w300);	
+		waitMethods.waiter(waitMethods.w250);
+		WebElement ele = driver.findElement(By.id("nextQuestion2")); 
+	    highlightElement.highLightElement(driver, ele);     
+	    ele.click();
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("Clicked Next Question");
+	} 
+					
 	
+	@Test(priority = 252) 
+	private void selectThirdQuestion() {
+		//waitMethods.implicitWait(waitMethods.w300);	
+		waitMethods.waiter(waitMethods.w500);			
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div[1]/div[2]/form/div/div/div/div/div[2]/span/div[1]")); 
+	    highlightElement.highLightElement(driver, ele);     
+	    ele.click();
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("Answered Third Question");
+	} 
+
+	
+	@Test(priority = 254) 
+	private void selectNextQuestion() {
+		//waitMethods.implicitWait(waitMethods.w300);	
+		waitMethods.waiter(waitMethods.w250);
+		WebElement ele = driver.findElement(By.id("nextQuestion2")); 
+	    highlightElement.highLightElement(driver, ele);     
+	    ele.click();
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("Selected 'Next Question' (3)");
+	} 
+
+	
+	@Test(priority = 256) 
+	private void selectSubmitRequest() {
+		//waitMethods.implicitWait(waitMethods.w300);	
+		waitMethods.waiter(waitMethods.w2k);				//
+		WebElement ele = driver.findElement(By.xpath("html/body/div[2]/div/div/div[1]/div[1]/div[2]/div[2]/button")); 
+	    highlightElement.highLightElement(driver, ele);     
+	    ele.click();
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("Selected 'Submit Request'");
+	} 
+
+
+	@Test(priority = 258) 
+	private void enterRequestCommend() {
+		//waitMethods.implicitWait(waitMethods.w300);	
+		waitMethods.waiter(waitMethods.w1k);
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[1]/div[3]/div/form/div[2]/textarea")); 
+	    highlightElement.highLightElement(driver, ele);     
+	    ele.sendKeys("Automated Test Comment");
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("Request Comment Added");
+	} 
+
+
+	@Test(priority = 260) 
+	private void selectAcceptJob() {
+		//waitMethods.implicitWait(waitMethods.w300);	
+		waitMethods.waiter(waitMethods.w250);
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[1]/div[3]/div/form/div[2]/div/button")); 
+	    highlightElement.highLightElement(driver, ele);     
+	    ele.sendKeys("Automated Test Comment");
+		waitMethods.waiter(waitMethods.w250);
+	    System.out.println("selected 'Accept Job'");
+	} 
+
+	
+	public String getDate() {
+	      String pattern = "MM/dd HH:mm";
+	      SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+
+	      String date = simpleDateFormat.format(new Date());
+	      System.out.println(date);
+	      
+	      return date;
+		
+		
+	}
 
 }  //class
+	

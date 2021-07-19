@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="RegressionSuite">
 	
-	<!-- 
+ <!-- 
 	<test name="Home Page">
 		<parameter name="env" value="https://localhost/LEAF_Request_Portal/">
 		<parameter name="browser" value="chrome"/>
@@ -21,7 +21,7 @@
 			</parameter>
 	</test>        
 	
-	  
+  
 	<test name="User Access Groups">
 		<parameter name="env" value="https://localhost/LEAF_Request_Portal/admin/?a=mod_groups">
 		<parameter name="browser" value="chrome"/>
@@ -30,7 +30,8 @@
 			</classes>
 			</parameter>
 	</test>
-  -->
+
+-->	  
 	 <test name="Create New Request Workflow">
 		<parameter name="env" value="https://localhost/LEAF_Request_Portal/">
 		<parameter name="browser" value="chrome"/>
@@ -39,5 +40,18 @@
 			</classes>
 			</parameter>
 	</test>
+  
+  
+<!-- 		 
+		 <test name="AUT">
+		<parameter name="env" value="https://localhost/LEAF_Request_Portal/?a=newform">
+		<parameter name="browser" value="chrome"/>
+			<classes>
+				<class name="Framework.elementLocator"/>
+			</classes>
+			</parameter>
+	</test>
+	
+ -->	
 </suite>
 
