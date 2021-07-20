@@ -31,8 +31,13 @@
 			</parameter>
 	</test>
 
+<<<<<<< Updated upstream
 -->	  
 	 <test name="Create New Request Workflow">
+=======
+	  
+	<test name="Create New Request Workflow">
+>>>>>>> Stashed changes
 		<parameter name="env" value="https://localhost/LEAF_Request_Portal/">
 		<parameter name="browser" value="chrome"/>
 			<classes>
@@ -41,6 +46,7 @@
 			</parameter>
 	</test>
   
+<<<<<<< Updated upstream
   
 <!-- 		 
 		 <test name="AUT">
@@ -48,10 +54,23 @@
 		<parameter name="browser" value="chrome"/>
 			<classes>
 				<class name="Framework.elementLocator"/>
+=======
+  -->  
+		 
+	<test name="AUT">
+		<parameter name="env" value="https://localhost/LEAF_Nexus/">
+		<parameter name="browser" value="chrome"/>
+			<classes>
+				<class name="Execution.orgChartWorkflow"/>
+>>>>>>> Stashed changes
 			</classes>
 			</parameter>
 	</test>
 	
+<<<<<<< Updated upstream
  -->	
+=======
+<!--     -->	
+>>>>>>> Stashed changes
 </suite>
 
