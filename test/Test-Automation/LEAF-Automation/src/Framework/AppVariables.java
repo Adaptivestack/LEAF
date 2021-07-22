@@ -2,7 +2,13 @@ package Framework;
 
 public class AppVariables {
 
+<<<<<<< Updated upstream
 	public final static String CHROMEDRIVER = "C:/DEV/Tools/Selenium/ChromeDriver_90.0.4430.24/chromedriver_win32/chromedriver.exe";
+=======
+	//public final static String CHROMEDRIVER = "C:/DEV/Tools/Selenium/ChromeDriver_92.0.4515.43/chromedriver_win32/chromedriver.exe";
+	public final static String CHROMEDRIVER = "C:/DEV/Tools/Selenium/ChromeDriver_90.0.4430.24/chromedriver_win32/chromedriver.exe";
+										
+>>>>>>> Stashed changes
 	public final static String IEDRIVER = "C:/DEV/Tools/Selenium/IEDriver/IEDriverServer_Win32_3.150.1/IEDriverServer.exe";
 	
 	//Environment - Change this value to select environment
@@ -22,11 +28,14 @@ public class AppVariables {
 	public final static String LOCALUID = "tester";
 	public final static String LOCALPWD = "tester";
 
+<<<<<<< Updated upstream
 	//QA Environment
 	public final static String QAURI ="";
 	public final static String PRODURI ="";
 	//public final static String URI = "https://www.google.com/";
 
+=======
+>>>>>>> Stashed changes
 	
 	public final static String GOOGLEURL = "http://www,google.com/";
 	public final static String NULLURL = "http://www,google.com/";

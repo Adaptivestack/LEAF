@@ -93,7 +93,11 @@ public class orgChartWorkflow extends setupFramework {
 		System.out.println(verify);
 		Assert.assertTrue(ele.toString().contains("Wagner"));
 	
+<<<<<<< Updated upstream
 		waitMethods.waiter(waitMethods.w500);
+=======
+		waitMethods.waiter(waitMethods.w1k);
+>>>>>>> Stashed changes
 		System.out.println("Search for employee name on page");
 	}
 
@@ -120,7 +124,11 @@ public class orgChartWorkflow extends setupFramework {
 
 	
 	
+<<<<<<< Updated upstream
 	@Test(priority = 108) //STILL FAILING???
+=======
+	@Test(priority = 108) //
+>>>>>>> Stashed changes
 	public void verifySearchByPosition() {         
 		//waitMethods.implicitWait(waitMethods.w300);
 		//waitMethods.waiter(waitMethods.w1k);	
@@ -135,8 +143,81 @@ public class orgChartWorkflow extends setupFramework {
 	}
 
 
+<<<<<<< Updated upstream
 	
 	
+=======
+	@Test(priority = 110) //
+	private void searchByGroup() {
+		waitMethods.waiter(waitMethods.w1k);       
+		WebElement ele = driver.findElement(By.id("search"));
+    	//highlightElement.highLightElement(driver, ele);
+    	
+    	String name = "ADPAC";
+   
+    	for(int i = 0; i < name.length(); i++) {
+    		char c = name.charAt(i);
+    		String s = new StringBuilder().append(c).toString();
+    		ele.sendKeys(s);
+    		waitMethods.waiter(waitMethods.w200);
+    	}
+    	
+    	driver.findElement(By.id("search")).clear();
+    	System.out.println("Search By Group");			
+	}
+
+	
+	
+	@Test(priority = 112) //
+	public void verifySearchByGroup() {         
+		//waitMethods.implicitWait(waitMethods.w300);
+		//waitMethods.waiter(waitMethods.w1k);	
+		WebElement ele = driver.findElement(By.partialLinkText("ADPAC")); 
+		//highlightElement.highLightElement(driver, ele);
+		String verify = ele.toString();
+		System.out.println(verify);
+		Assert.assertTrue(ele.toString().contains("ADPAC"));
+	
+		waitMethods.waiter(waitMethods.w250);
+		System.out.println("Verify search by Group on page");
+	}
+
+	
+	@Test(priority = 114) //
+	private void searchByServices() {
+		waitMethods.waiter(waitMethods.w500);       
+		WebElement ele = driver.findElement(By.id("search"));
+    	//highlightElement.highLightElement(driver, ele);
+    	
+    	String name = "Office of GEC";
+   
+    	for(int i = 0; i < name.length(); i++) {
+    		char c = name.charAt(i);
+    		String s = new StringBuilder().append(c).toString();
+    		ele.sendKeys(s);
+    		waitMethods.waiter(waitMethods.w200);
+    	}
+    	
+    	driver.findElement(By.id("search")).clear();
+    	System.out.println("Search By Service");			
+	}
+
+	
+	
+	@Test(priority = 116) //
+	public void verifySearchByService() {         
+		//waitMethods.implicitWait(waitMethods.w300);
+		//waitMethods.waiter(waitMethods.w1k);	
+		WebElement ele = driver.findElement(By.partialLinkText("Office of GEC")); 
+		//highlightElement.highLightElement(driver, ele);
+		String verify = ele.toString();
+		System.out.println(verify);
+		Assert.assertTrue(ele.toString().contains("Office of GEC"));
+	
+		waitMethods.waiter(waitMethods.w250);
+		System.out.println("Verify search by Services on page");
+	}
+>>>>>>> Stashed changes
 	
 	
 	

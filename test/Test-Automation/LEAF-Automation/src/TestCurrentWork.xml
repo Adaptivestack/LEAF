@@ -32,8 +32,13 @@
 	</test>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 -->	  
 	 <test name="Create New Request Workflow">
+=======
+	  
+	<test name="Create New Request Workflow">
+>>>>>>> Stashed changes
 =======
 	  
 	<test name="Create New Request Workflow">
@@ -45,6 +50,7 @@
 			</classes>
 			</parameter>
 	</test>
+<<<<<<< Updated upstream
   
 <<<<<<< Updated upstream
   
@@ -58,18 +64,40 @@
   -->  
 		 
 	<test name="AUT">
+=======
+  		 
+	<test name="Org Chart Workflow">
+>>>>>>> Stashed changes
 		<parameter name="env" value="https://localhost/LEAF_Nexus/">
 		<parameter name="browser" value="chrome"/>
 			<classes>
 				<class name="Execution.orgChartWorkflow"/>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			</classes>
 			</parameter>
 	</test>
 	
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
  -->	
 =======
+<!--     -->	
+>>>>>>> Stashed changes
+=======
+  -->
+  	
+ 	<test name="Report Builder Workflow">
+		<parameter name="env" value="https://localhost/LEAF_Request_Portal/">
+		<parameter name="browser" value="chrome"/>
+			<classes>
+				<class name="Execution.reportBuilderWorkflow"/>
+			</classes>
+		</parameter>
+	</test>    
+	
 <!--     -->	
 >>>>>>> Stashed changes
 </suite>

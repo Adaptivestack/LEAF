@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [RegressionSuite]" guice-stage="DEVELOPMENT">
+<<<<<<< Updated upstream
   <test thread-count="5" name="AUT(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="env" value="https://localhost/LEAF_Nexus/"/>
@@ -15,4 +16,20 @@
       </class> <!-- Execution.orgChartWorkflow -->
     </classes>
   </test> <!-- AUT(failed) -->
+=======
+  <test thread-count="5" name="Report Builder Workflow(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="env" value="https://localhost/LEAF_Request_Portal/"/>
+    <classes>
+      <class name="Execution.reportBuilderWorkflow">
+        <methods>
+          <include name="clickReportBuilder"/>
+          <include name="initializeFramework"/>
+          <include name="setUp"/>
+          <include name="closeDown"/>
+        </methods>
+      </class> <!-- Execution.reportBuilderWorkflow -->
+    </classes>
+  </test> <!-- Report Builder Workflow(failed) -->
+>>>>>>> Stashed changes
 </suite> <!-- Failed suite [RegressionSuite] -->

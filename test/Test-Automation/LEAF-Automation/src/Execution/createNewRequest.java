@@ -27,7 +27,10 @@ import Framework.highlightElement;
 public class createNewRequest extends setupFramework {
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	//private static final DateFormat Calendar = null;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 	Date date = new Date();
