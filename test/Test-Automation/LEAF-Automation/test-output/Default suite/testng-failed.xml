@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< Updated upstream
       <class name="Execution.orgChartWorkflow">
         <methods>
           <include name="testForCertPage"/>
@@ -13,6 +14,20 @@
           <include name="closeDown"/>
         </methods>
       </class> <!-- Execution.orgChartWorkflow -->
+=======
+      <class name="Execution.reportBuilderWorkflow">
+        <methods>
+          <include name="clickServiceButton"/>
+          <include name="clickReportBuilder"/>
+          <include name="selectAnd01"/>
+          <include name="initializeFramework"/>
+          <include name="setUp"/>
+          <include name="closeDown"/>
+          <include name="inputTextBox01"/>
+          <include name="testForCertPage"/>
+        </methods>
+      </class> <!-- Execution.reportBuilderWorkflow -->
+>>>>>>> Stashed changes
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

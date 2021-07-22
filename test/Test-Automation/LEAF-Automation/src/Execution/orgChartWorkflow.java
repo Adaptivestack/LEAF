@@ -94,7 +94,11 @@ public class orgChartWorkflow extends setupFramework {
 		Assert.assertTrue(ele.toString().contains("Wagner"));
 	
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 		waitMethods.waiter(waitMethods.w500);
+=======
+		waitMethods.waiter(waitMethods.w1k);
+>>>>>>> Stashed changes
 =======
 		waitMethods.waiter(waitMethods.w1k);
 >>>>>>> Stashed changes
@@ -125,7 +129,11 @@ public class orgChartWorkflow extends setupFramework {
 	
 	
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	@Test(priority = 108) //STILL FAILING???
+=======
+	@Test(priority = 108) //
+>>>>>>> Stashed changes
 =======
 	@Test(priority = 108) //
 >>>>>>> Stashed changes
@@ -144,9 +152,12 @@ public class orgChartWorkflow extends setupFramework {
 
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	
 	
 =======
+=======
+>>>>>>> Stashed changes
 	@Test(priority = 110) //
 	private void searchByGroup() {
 		waitMethods.waiter(waitMethods.w1k);       
@@ -217,6 +228,9 @@ public class orgChartWorkflow extends setupFramework {
 		waitMethods.waiter(waitMethods.w250);
 		System.out.println("Verify search by Services on page");
 	}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	
 	

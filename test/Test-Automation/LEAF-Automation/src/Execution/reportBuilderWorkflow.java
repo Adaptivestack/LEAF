@@ -15,6 +15,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+<<<<<<< Updated upstream
+=======
+import org.openqa.selenium.support.ui.Select;
+>>>>>>> Stashed changes
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -94,7 +98,11 @@ public class reportBuilderWorkflow extends setupFramework {
 	@Test(priority = 104) //
 	private void inputTextBox01() {
 		waitMethods.waiter(waitMethods.w250);       
+<<<<<<< Updated upstream
 		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr[1]/td[4]/input"));
+=======
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr/td[5]/input"));
+>>>>>>> Stashed changes
     	highlightElement.highLightElement(driver, ele);
     	
     	String name = "test";
@@ -112,6 +120,7 @@ public class reportBuilderWorkflow extends setupFramework {
 
 	
 	
+<<<<<<< Updated upstream
 //	@Test(priority = 106) //
 //	private void methodTitle() {
 //		waitMethods.waiter(waitMethods.w250);       
@@ -140,6 +149,97 @@ public class reportBuilderWorkflow extends setupFramework {
 
 
 //	@Test(priority = 106) //
+=======
+	@Test(priority = 106) //  1st And
+	private void selectAnd01() {
+		waitMethods.waiter(waitMethods.w250);       
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/button[2]"));
+		highlightElement.highLightElement(driver, ele);
+   		ele.click();
+		waitMethods.waiter(waitMethods.w200);
+    	System.out.println("Report Builder clicked first 'and' button");
+	}
+
+
+		
+	
+	@Test(priority = 108) //
+	public void clickServiceButton02() {         
+		//waitMethods.implicitWait(waitMethods.w300);
+		waitMethods.waiter(waitMethods.w250);			//The below opens the DDL
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr[2]/td[3]/div/a"));
+		highlightElement.highLightElement(driver, ele);
+		ele.click();
+		waitMethods.waiter(waitMethods.w200);
+		WebElement ele2 = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr[2]/td[3]/div/div/ul/li[2]"));
+		highlightElement.highLightElement(driver, ele2);
+		ele2.click();
+		waitMethods.waiter(waitMethods.w250);
+		System.out.println("Clicked on Service Button Row 2");
+	}
+
+	
+	@Test(priority = 110) //  1st OR
+	private void selectOr01() {
+		waitMethods.waiter(waitMethods.w250);       
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/button[3]"));
+		highlightElement.highLightElement(driver, ele);
+   		ele.click();
+		waitMethods.waiter(waitMethods.w200);
+    	System.out.println("Report Builder clicked first 'OR' button");
+	}
+
+	@Test(priority = 112) //
+	public void inputTextBox03() {         
+		//waitMethods.implicitWait(waitMethods.w300);
+		waitMethods.waiter(waitMethods.w250);			//The below opens the DDL
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr[3]/td[3]/div/a"));
+		highlightElement.highLightElement(driver, ele);
+		ele.click();
+		waitMethods.waiter(waitMethods.w200);
+		WebElement ele2 = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr[3]/td[3]/div/div/ul/li[2]"));
+		highlightElement.highLightElement(driver, ele2);
+		ele2.click();
+		waitMethods.waiter(waitMethods.w250);
+		System.out.println("Clicked on Service Button Row 3");
+	}
+
+
+	@Test(priority = 114) //
+	public void clickServiceButton03() {         
+		//waitMethods.implicitWait(waitMethods.w300);
+		waitMethods.waiter(waitMethods.w500);			//The below opens the DDL
+		WebElement ele = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr[3]/td[5]/div/a"));
+		highlightElement.highLightElement(driver, ele);
+		ele.click();
+		waitMethods.waiter(waitMethods.w200);
+		WebElement ele2 = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/div[2]/div/div[1]/fieldset/table/tr[3]/td[5]/div/div/ul/li[6]"));
+		highlightElement.highLightElement(driver, ele2);
+		ele2.click();
+		waitMethods.waiter(waitMethods.w250);
+		System.out.println("Selected Facilities Row 3");
+	}
+	
+	////////////   DDL TEMPLATE \\\\\\\\\\\\\\\\\\
+//	@Test(priority = 199) //
+//	public void DDL_Template() {         
+//		//waitMethods.implicitWait(waitMethods.w300);
+//		waitMethods.waiter(waitMethods.w250);			//The below opens the DDL
+//		WebElement ele = driver.findElement(By.xpath(""));
+//		highlightElement.highLightElement(driver, ele);
+//		ele.click();
+//		waitMethods.waiter(waitMethods.w200);
+//		WebElement ele2 = driver.findElement(By.xpath(""));
+//		highlightElement.highLightElement(driver, ele2);
+//		ele2.click();
+//		waitMethods.waiter(waitMethods.w250);
+//		System.out.println("");
+//	}
+
+	
+	
+//	@Test(priority = 196) //
+>>>>>>> Stashed changes
 //	private void searchByPosition() {
 //		waitMethods.waiter(waitMethods.w500);       
 //		WebElement ele = driver.findElement(By.id("search"));

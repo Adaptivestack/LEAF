@@ -20,7 +20,11 @@
 				<class name="Execution.adminUserAccessTest"/>
 			</classes>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			</parameter>
+=======
+		</parameter>
+>>>>>>> Stashed changes
 =======
 		</parameter>
 >>>>>>> Stashed changes
@@ -35,17 +39,23 @@
 				<class name="Execution.adminPageTest"/>
 			</classes>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			</parameter>
 	</test>      
 
  
 		<test name="New Request Workflow">
 =======
+=======
+>>>>>>> Stashed changes
 		</parameter>
 	</test>      
 
  
 	<test name="New Request Workflow">
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		<parameter name="env" value="https://localhost/LEAF_Request_Portal/">
 		<parameter name="browser" value="chrome"/>
@@ -53,11 +63,14 @@
 				<class name="Execution.createNewRequest"/>
 			</classes>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			</parameter>
 	</test>    
 
  
 =======
+=======
+>>>>>>> Stashed changes
 		</parameter>
 	</test>    
 
@@ -79,6 +92,9 @@
 			</classes>
 		</parameter>
 	</test>    
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   
 </suite>

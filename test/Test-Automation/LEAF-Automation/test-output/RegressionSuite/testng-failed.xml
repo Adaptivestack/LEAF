@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [RegressionSuite]" guice-stage="DEVELOPMENT">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <test thread-count="5" name="AUT(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="env" value="https://localhost/LEAF_Nexus/"/>
@@ -17,13 +18,19 @@
     </classes>
   </test> <!-- AUT(failed) -->
 =======
+=======
+>>>>>>> Stashed changes
   <test thread-count="5" name="Report Builder Workflow(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="env" value="https://localhost/LEAF_Request_Portal/"/>
     <classes>
       <class name="Execution.reportBuilderWorkflow">
         <methods>
+<<<<<<< Updated upstream
           <include name="clickReportBuilder"/>
+=======
+          <include name="clickServiceButton03"/>
+>>>>>>> Stashed changes
           <include name="initializeFramework"/>
           <include name="setUp"/>
           <include name="closeDown"/>
@@ -31,5 +38,8 @@
       </class> <!-- Execution.reportBuilderWorkflow -->
     </classes>
   </test> <!-- Report Builder Workflow(failed) -->
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 </suite> <!-- Failed suite [RegressionSuite] -->

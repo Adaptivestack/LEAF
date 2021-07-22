@@ -1,0 +1,67 @@
+package Framework;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+
+public class elementLocator {
+
+	public WebDriver driver;
+	
+	public WebDriver getDriver() {						
+	        return driver;				
+	}		
+	
+	//Need to add Firefox (& driver) and Edge
+	private void setDriver(String browser, String env) 	{			
+	   switch (browser) {     //Step Over
+	   		case "chrome":
+	   			driver = chromeLogin(env);
+	   			break;
+	   		default:
+	   			System.out.println("browser : " + browser + " is invalid, Launching Chrome as browser of choice..");
+
+	   		driver = chromeLogin(env);
+	   }
+	}  // OVER
+	
+
+	private static WebDriver chromeLogin(String env) {						//This is all I need for now
+		//Currently version 90.0.4430.93
+		System.out.println("Launching Chrome");  //Step Over until - return driver;
+		System.setProperty("webdriver.chrome.driver", Framework.AppVariables.CHROMEDRIVER);
+		
+		
+			if (AppVariables.headless) {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200",
+						"--ignore-certificate-errors", "--disable-extensions", "--no-sandbox",
+						"--disable-dev-shm-usage");
+				WebDriver driver = new ChromeDriver(options);
+				driver.navigate().to(env);
+				System.out.println("Driver established for: " + driver.getClass());
+				return driver;  //HEADLESS driver
+
+			} else {
+				WebDriver driver = new ChromeDriver();
+				driver.manage().window().maximize();
+				driver.navigate().to(env);
+				System.out.println("Driver established for: " + driver.getClass());
+				
+				return driver;  
+
+			}
+		
+
+	}	
+				
+	
+	
+}  //class
